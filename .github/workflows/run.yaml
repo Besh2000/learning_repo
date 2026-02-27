@@ -14,5 +14,5 @@ jobs:
         runs-on: windows-latest
         steps:
             - name: get the windows version
-              run: winver            
+              run: Get-ComputerInfo | Select WindowsProductName, WindowsVersion, OsHardwareAbstractionLayer            
                 
