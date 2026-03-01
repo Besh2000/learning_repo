@@ -1,6 +1,24 @@
 name : learning
 on: 
   workflow_dispatch:
+    inputs:
+      string:
+        description: "Specify about the change"
+        type: string
+        required: true
+        default: "Specify about the change"
+      option:
+        description: "Choose a branch from the list of options"
+        type: choice
+        default: "main"
+        options:
+          - main
+          - develop
+        required: true
+      Environment:
+        description: Choose an Environment
+        type: environment
+        required: true
 
 jobs:
   sample_run:
