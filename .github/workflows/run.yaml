@@ -4,11 +4,14 @@ jobs:
     run-shell-commands:
         runs-on: ubuntu-latest
         steps:
-            - name: echo a string
-              run: |
-                echo $GITHUB_SHA
+            
             - name: Copy the code
               uses: actions/checkout@v3
+
+            - name: echo a string
+              run: |
+                pwd
+                ls -la
               
 
 
