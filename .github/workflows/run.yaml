@@ -5,15 +5,12 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: echo a string
-              run: echo "hello world"
-            - name: Multiline command
               run: |
-                node -v
-                npm -v
-    bake_ci:
-        runs-on: windows-latest
-        needs: run-shell-commands
-        steps:
-            - name: get the windows version
-              run: Get-ComputerInfo | Select WindowsProductName, WindowsVersion, OsHardwareAbstractionLayer            
-                
+                echo $GITHUB_SHA
+            - name: Copy the code
+              uses: actions/checkout@v3
+              
+
+
+
+            
