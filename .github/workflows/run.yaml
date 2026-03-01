@@ -25,7 +25,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print
-        run: echo "hello"
+        run: | 
+          echo " Environement : ${{inputs.Environement}}"
+          echo " Branch : ${{inputs.option}}"
+
 
 
 
