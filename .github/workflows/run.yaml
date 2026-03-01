@@ -1,18 +1,13 @@
 name : learning
-on: [push]
-jobs:
-    run-shell-commands:
-        runs-on: ubuntu-latest
-        steps:
-            
-            - name: Copy the code
-              uses: actions/checkout@v3
+on: 
+  workflow_dispatch:
 
-            - name: echo a string
-              run: |
-                pwd
-                ls -la
-              
+jobs:
+  sample_run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print
+        run: echo"hello"
 
 
 
